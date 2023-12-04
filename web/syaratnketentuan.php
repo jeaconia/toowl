@@ -43,7 +43,7 @@
 </br></br></br></br>
         <h2>Syarat dan Ketentuan</h2>
         <h4>ANUlaundry</h4> </br>
-        <div class="p-2 rounded-3 text-danger-emphasis bg-danger-subtle" style="border: 10px var(--bs-danger-border) solid">
+        <div class="p-2 rounded-3 text-danger-emphasis bg-danger-subtle" style="border: 10px var(--bs-danger-border-subtle) solid">
         <h6><strong>PERHATIAN!</strong></h6>
     </div>  
         </div> </br>
