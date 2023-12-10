@@ -25,9 +25,9 @@
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
             <a class="nav-link" href="homepage.php">Home</a>
-            <a class="nav-link" href="syaratnketentuan.php">Syarat & Ketentuan</a>
+            <a class="nav-link active" href="syaratnketentuan.php" aria-current="S&K" >Syarat & Ketentuan</a>
             <a class="nav-link" href="lokasi.php">Lokasi</a>
-            <a class="nav-link active" href="transaksi.php"aria-current="Informasi Transaksi">Info Transaksi</a>
+            <a class="nav-link" href="transaksi.php">Info Transaksi</a>
           </li>
         </ul>
         <form class="d-flex mt-3" role="search">
@@ -39,23 +39,25 @@
   </div>
   </nav>
 
-  <div class="card text-center">
-  <div class="card-header">
-  VASTlaundry
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  <div class="card-footer text-body-secondary">
-    2 days ago
-  </div>
-</div>
-
-
-
+    <div class="container mx-auto p-2 text-center" style="width: 800px;">
+</br></br></br></br>
+        <h2>Syarat dan Ketentuan</h2>
+        <h4>VASTlaundry</h4> </br>
+        <div class="p-2 rounded-3 text-danger-emphasis bg-danger-subtle" style="border: 10px var(--bs-danger-border-subtle) solid">
+        <h6><strong>PERHATIAN!</strong></h6>
+    </div>  
+        </div> </br>
+    <div class="container mx-auto p-2 bg-primary-subtle rounded-3" style="width: 800px;">
+        <p1>1. Pengambilan barang harus disertai nota elektronik. </br>
+            2. Barang yang tidak diambil selama 7 hari, hilang/rusak tidak diganti. </br>
+            3. Cucian yang hilang karena proses pengerjaan diganti gratis cuci 1x (max 3kg) per potong yang hilang. </br>
+            4. Klaim luntur tidak dipisah, diluar tanggungan. </br>
+            5. Hak klaim berlaku 2 jam setelah barang diambil dan disertai video pembukaan plastik cucian. </br>
+            6. Detail peraturan dapat dibaca di informasi yang dipajang di toko. </br>
+            7. Setiap konsumen dianggap setuju dengan isi perhitungan tersebut diatas.</p1>
+    </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+
+</body>
 </html>

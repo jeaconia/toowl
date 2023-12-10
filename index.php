@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,31 +8,30 @@
   </head>
   <body>
 
-</br> </br> </br> </br> </br> </br>
-<div class="container mx-auto p-2 text-center" style="width: 800px;">
-<button type="button" class="btn btn-primary btn-lg" href="homepage.php">VAST LAUNDRY HOMEPAGE</button></br></br>
-<button type="button" class="btn btn-primary btn-lg" href="login-admin.php">LOGIN</button>
-</div> </br> </br>
+  </br></br></br></br></br></br>
+    <div class="container mx-auto p-2 text-center" style="width: 800px;">
+      <a href="homepage.php" class="btn btn-primary btn-lg">VAST LAUNDRY HOMEPAGE</a></br></br>
+      <a href="login-admin.php" class="btn btn-primary btn-lg">LOGIN</a>
+    </div> </br> </br>
 
-<footer class="bd-footer py-4 py-md-5 mt-5 bg-primary-subtle">
-  <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary text-center">
-      <p1>All Rights Reserved ©VASTlaundry 2023</p1></br></br></br>
-      <div class="row align-items-center">
-        <a class="col fs-6" href="https://youtu.be/dQw4w9WgXcQ?si=pX8mEhsOMYARGLf3">
-          Instagram
-        </a>
-        <a class="col fs-6" href="https://youtu.be/BbeeuzU5Qc8?si=crrkoGANXCXw-Xrd">
-          Whatsapp
-        </a>
-        <a class="col fs-6" href="https://youtu.be/n4kluqkCymw?si=DWRcIm0MtOOhOiNp">
-          Line
-        </a>
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-primary-subtle">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary text-center">
+        <p>All Rights Reserved ©VASTlaundry 2023</p></br></br></br>
+        <div class="row align-items-center">
+          <a class="col fs-6" href="https://youtu.be/dQw4w9WgXcQ?si=pX8mEhsOMYARGLf3">
+            Instagram
+          </a>
+          <a class="col fs-6" href="https://youtu.be/BbeeuzU5Qc8?si=crrkoGANXCXw-Xrd">
+            Whatsapp
+          </a>
+          <a class="col fs-6" href="https://youtu.be/n4kluqkCymw?si=DWRcIm0MtOOhOiNp">
+            Line
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   </body>
 </html>
