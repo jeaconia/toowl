@@ -13,7 +13,7 @@
   <nav class="navbar bg-primary-subtle fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <p class="fs-3">ANUlaundry</p>
+        <p class="fs-3">VASTlaundry</p>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
