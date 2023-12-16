@@ -1,7 +1,7 @@
 <?php
 require 'functions.php';
 
-$conn = mysqli_connect("localhost", "tool", "12345678", "db_vast_laundry");
+$conn = mysqli_connect("localhost", "tool", "12345678", "vast_laundry");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -17,7 +17,7 @@ if (isset($_POST["login"])) {
         $row = mysqli_fetch_assoc($result);
         
         if (password_verify($password, $row["password"])) {
-            header("Location: tambah-pelanggan.php");
+            header("Location: database.php");
             exit;
         }
     }

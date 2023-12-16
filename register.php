@@ -1,7 +1,7 @@
 <?php
 require 'functions.php';
 
-$conn = mysqli_connect("localhost", "tool", "12345678", "db_vast_laundry");
+$conn = mysqli_connect("localhost", "tool", "12345678", "vast_laundry");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -12,6 +12,8 @@ if(isset($_POST["register"])) {
         echo "<script>
                 alert('Akun admin berhasil ditambahkan!')
               </script>";
+
+        header("location: login-admin.php");
     } else { 
         echo mysqli_error($conn);
     }
