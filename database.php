@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <title>Database Pelanggan</title>
+        <title>Database Pelanggan VASTlaundry</title>
     </head>
     <body>
   <nav class="navbar bg-primary-subtle fixed-top">
@@ -46,8 +46,6 @@
 
   </br></br></br></br></br></br>
         <div class="container">
-            <button class="btn btn-primary my-5"><a href="data.php" class="text-light">Tambah Data</a>
-            </button>
 
             <table class="table">
   <thead>
@@ -93,11 +91,11 @@
 
     }
   ?>
-
-  
   </tbody>
 </table>
-        </div>
+            <button class="btn btn-primary my-5"><a href="data.php" class="text-light">Tambah Data</a>
+            </button>
+  </div>
 
         <footer class="bd-footer py-4 py-md-5 mt-5 bg-primary-subtle">
       <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary text-center">
