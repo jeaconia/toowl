@@ -1,29 +1,5 @@
 <?php
-require 'functions.php';
-
-$conn = mysqli_connect("localhost", "tool", "12345678", "vast_laundry");
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-if (isset($_POST["login"])) {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-    $result = mysqli_query($conn, "SELECT username, password FROM tb_register WHERE username = '$username'");
-
-    if (mysqli_num_rows($result) == 1) {
-        $row = mysqli_fetch_assoc($result);
-        
-        if (password_verify($password, $row["password"])) {
-            header("Location: tambah-pelanggan.php");
-            exit;
-        }
-    }
-
-    $error = true;
-}
+    include 'koneksi.php';
 ?>
 
 <!doctype html>
@@ -74,6 +50,41 @@ if (isset($_POST["login"])) {
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
   <button class="btn btn-outline-success" type="submit">Search</button>
   </form>
+</div>
+
+</br></br>
+<div class="container mx-auto p-2" style="width: 700px;">
+  <?php
+    $sql="SELECT * FROM tb_pelanggan;";
+    $result=mysqli_query($koneksi, $sql);
+    if($result) {
+        while($row=mysqli_fetch_assoc($result)) {
+            $id_pelanggan = $row['id_pelanggan'];
+            $nama_pelanggan = $row['nama_pelanggan'];
+            $hp_pelanggan = $row['hp_pelanggan'];
+            $jenis_layanan = $row['jenis_layanan'];
+            $jumlah_pakaian = $row['jumlah_pakaian'];
+            $berat_total = $row['berat_total'];
+            $harga_total = $row['harga_total'];
+            echo '<div class="card">
+                    <div class="card-header">
+                      ID Pemesanan: ' . $id_pelanggan . '<br>
+                      Nama Pelanggan: ' . $nama_pelanggan .'
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        No. HP Pelanggan: ' . $hp_pelanggan . '<br>
+                        Jenis Layanan: ' . $jenis_layanan . '<br>
+                        Jumlah Pakaian: ' . $jumlah_pakaian . '<br>
+                        Berat Total: ' . $berat_total . '<br>
+                        Harga Total: ' . $harga_total . '</p>
+                    </div>
+                  </div>
+                  <br>';
+        }
+
+    }
+  ?>
 </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

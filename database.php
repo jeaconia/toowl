@@ -50,7 +50,7 @@
             <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID Pelanggan</th>
+      <th scope="col">ID Pemesanan</th>
       <th scope="col">Nama Pelanggan</th>
       <th scope="col">No. HP</th>
       <th scope="col">Jenis Layanan</th>
