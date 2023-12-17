@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2023 at 11:52 PM
+-- Generation Time: Dec 17, 2023 at 06:28 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pelanggan`
+-- Table structure for table `tb_pelanggan_kiloan`
 --
 
-CREATE TABLE `tb_pelanggan` (
+CREATE TABLE `tb_pelanggan_kiloan` (
   `id_pelanggan` int(11) NOT NULL,
   `nama_pelanggan` varchar(100) NOT NULL,
   `hp_pelanggan` varchar(15) NOT NULL,
@@ -38,11 +38,25 @@ CREATE TABLE `tb_pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_pelanggan`
+-- Dumping data for table `tb_pelanggan_kiloan`
 --
 
-INSERT INTO `tb_pelanggan` (`id_pelanggan`, `nama_pelanggan`, `hp_pelanggan`, `jenis_layanan`, `jumlah_pakaian`, `berat_total`, `harga_total`) VALUES
+INSERT INTO `tb_pelanggan_kiloan` (`id_pelanggan`, `nama_pelanggan`, `hp_pelanggan`, `jenis_layanan`, `jumlah_pakaian`, `berat_total`, `harga_total`) VALUES
 (3, 'Karin', '081546735547', 'Express', 13, 2, 15000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_pelanggan_satuan`
+--
+
+CREATE TABLE `tb_pelanggan_satuan` (
+  `id_pelanggan` int(11) NOT NULL,
+  `nama_pelanggan` varchar(100) NOT NULL,
+  `hp_pelanggan` varchar(15) NOT NULL,
+  `jenis_layanan` enum('Reguler','Express','','') NOT NULL,
+  `harga_total` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -65,15 +79,23 @@ INSERT INTO `tb_register` (`id_admin`, `username`, `password`) VALUES
 (2, 'alexa', '$2y$10$AFRm0/T.vk4RCEYSwYf6Iu66vB4gsd1eAN.KKqwBvmPfg5sYdUm4K'),
 (3, 'karin', '$2y$10$TUzAA5bUmzn.kdCAwSt2FeiQ9.jBj0D6IZKYAo9za3GNKIaatMpL2');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_sepatu`
+--
+
+CREATE TABLE `tb_sepatu` (
+  `id_pelanggan` int(11) NOT NULL,
+  `nama_pelanggan` varchar(100) NOT NULL,
+  `hp_pelanggan` varchar(15) NOT NULL,
+  `jenis_layanan` enum('Reguler','Express','','') NOT NULL,
+  `harga_total` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `tb_pelanggan`
---
-ALTER TABLE `tb_pelanggan`
-  ADD PRIMARY KEY (`id_pelanggan`);
 
 --
 -- Indexes for table `tb_register`
@@ -86,12 +108,6 @@ ALTER TABLE `tb_register`
 --
 
 --
--- AUTO_INCREMENT for table `tb_pelanggan`
---
-ALTER TABLE `tb_pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `tb_register`
 --
 ALTER TABLE `tb_register`
@@ -101,11 +117,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-CREATE TABLE 'tb_pelanggan_satuan' (
-   `id_pelanggan` int(11) NOT NULL,
-  `nama_pelanggan` varchar(100) NOT NULL,
-  `hp_pelanggan` varchar(15) NOT NULL,
-  `jenis_layanan` enum('Reguler','Express','','') NOT NULL,
-  `harga_total` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
