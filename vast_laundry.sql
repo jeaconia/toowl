@@ -101,3 +101,11 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE 'tb_pelanggan_satuan' (
+   `id_pelanggan` int(11) NOT NULL,
+  `nama_pelanggan` varchar(100) NOT NULL,
+  `hp_pelanggan` varchar(15) NOT NULL,
+  `jenis_layanan` enum('Reguler','Express','','') NOT NULL,
+  `harga_total` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
