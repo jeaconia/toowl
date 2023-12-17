@@ -63,7 +63,7 @@
   <tbody>
 
   <?php
-    $sql="SELECT * FROM tb_pelanggan;";
+    $sql="SELECT * FROM tb_pelanggan_kiloan;";
     $result=mysqli_query($koneksi, $sql);
     if($result) {
         while($row=mysqli_fetch_assoc($result)) {
@@ -83,8 +83,8 @@
             <td>'.$berat_total.'</td>
             <td>'.$harga_total.'</td>
             <td>
-                <button class="btn btn-primary"><a href="edit.php? editid='.$id_pelanggan.'" class="text-light">Edit</a></button>
-                <button class="btn btn-danger"><a href="delete.php? deleteid='.$id_pelanggan.'" class ="text-light">Delete</a></button>
+                <button class="btn btn-primary"><a href="edit-kiloan.php? editid='.$id_pelanggan.'" class="text-light">Edit</a></button>
+                <button class="btn btn-danger"><a href="delete-kiloan.php? deleteid='.$id_pelanggan.'" class ="text-light">Delete</a></button>
             </td>
           </tr>';
         }
@@ -93,7 +93,7 @@
   ?>
   </tbody>
 </table>
-            <button class="btn btn-primary my-5"><a href="data.php" class="text-light">Tambah Data</a>
+            <button class="btn btn-primary my-5"><a href="data-kiloan.php" class="text-light">Tambah Data</a>
             </button>
   </div>
 

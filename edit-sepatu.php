@@ -2,7 +2,7 @@
 include "koneksi.php";
 
 $id_pelanggan = $_GET['editid'];
-$sql="SELECT * FROM tb_pelanggan WHERE id_pelanggan='$id_pelanggan'";
+$sql="SELECT * FROM tb_sepatu WHERE id_pelanggan='$id_pelanggan'";
 $result = mysqli_query($koneksi, $sql);
 $row=mysqli_fetch_assoc($result);
     $id_pelanggan = $row['id_pelanggan'];
@@ -10,24 +10,21 @@ $row=mysqli_fetch_assoc($result);
     $hp_pelanggan = $row['hp_pelanggan'];
     $jenis_layanan = $row['jenis_layanan'];
     $jumlah_pakaian = $row['jumlah_pakaian'];
-    $berat_total = $row['berat_total'];
     $harga_total = $row['harga_total'];
 if(isset($_POST['submit'])) { 
     $nama_pelanggan = $_POST['nama_pelanggan'];
     $hp_pelanggan = $_POST['hp_pelanggan'];
     $jenis_layanan= $_POST['jenis_layanan'];
     $jumlah_pakaian= $_POST['jumlah_pakaian'];
-    $berat_total= $_POST['berat_total'];
     $harga_total=$_POST['harga_total'];
 
-    $sql="UPDATE tb_pelanggan SET id_pelanggan='$id_pelanggan', nama_pelanggan='$nama_pelanggan', hp_pelanggan='$hp_pelanggan',
+    $sql="UPDATE tb_sepatu SET id_pelanggan='$id_pelanggan', nama_pelanggan='$nama_pelanggan', hp_pelanggan='$hp_pelanggan',
     jenis_layanan='$jenis_layanan',
     jumlah_pakaian='$jumlah_pakaian',
-    berat_total='$berat_total',
     harga_total='$harga_total' WHERE id_pelanggan=$id_pelanggan";
     $result=mysqli_query($koneksi, $sql);
     //echo "data berhasil di update";
-    header('location:database.php');
+    header('location:database-sepatu.php');
 } 
 ?>
 
@@ -64,11 +61,6 @@ if(isset($_POST['submit'])) {
         <div class="form-group">
             <label class="form-label">Jumlah Pakaian</label>
             <input type="text" class="form-control" placeholder="Masukkan jumlah pakaian" name="jumlah_pakaian" autocomplete="off" value=<?php echo $jumlah_pakaian; ?>>
-        </div>
-        <br>
-        <div class="form-group">
-            <label class="form-label">Berat</label>
-            <input type="text" class="form-control" placeholder="Masukkan berat total" name="berat_total" autocomplete="off" value=<?php echo $berat_total; ?>>
         </div>
         <br>
         <div class="form-group">

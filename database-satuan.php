@@ -54,8 +54,6 @@
       <th scope="col">Nama Pelanggan</th>
       <th scope="col">No. HP</th>
       <th scope="col">Jenis Layanan</th>
-      <th scope="col">Jumlah Pakaian</th>
-      <th scope="col">Berat Total</th>
       <th scope="col">Harga Total</th>
       <th scope="col">Pengaturan</th>
     </tr>
@@ -63,7 +61,7 @@
   <tbody>
 
   <?php
-    $sql="SELECT * FROM tb_pelanggan;";
+    $sql="SELECT * FROM tb_pelanggan_satuan;";
     $result=mysqli_query($koneksi, $sql);
     if($result) {
         while($row=mysqli_fetch_assoc($result)) {
@@ -71,20 +69,16 @@
             $nama_pelanggan = $row['nama_pelanggan'];
             $hp_pelanggan = $row['hp_pelanggan'];
             $jenis_layanan = $row['jenis_layanan'];
-            $jumlah_pakaian = $row['jumlah_pakaian'];
-            $berat_total = $row['berat_total'];
             $harga_total = $row['harga_total'];
             echo '<tr>
             <th scope="row">'.$id_pelanggan.'</th>
             <td>'.$nama_pelanggan.'</td>
             <td>'.$hp_pelanggan.'</td>
             <td>'.$jenis_layanan.'</td>
-            <td>'.$jumlah_pakaian.'</td>
-            <td>'.$berat_total.'</td>
             <td>'.$harga_total.'</td>
             <td>
-                <button class="btn btn-primary"><a href="edit.php? editid='.$id_pelanggan.'" class="text-light">Edit</a></button>
-                <button class="btn btn-danger"><a href="delete.php? deleteid='.$id_pelanggan.'" class ="text-light">Delete</a></button>
+                <button class="btn btn-primary"><a href="edit-satuan.php? editid='.$id_pelanggan.'" class="text-light">Edit</a></button>
+                <button class="btn btn-danger"><a href="delete-satuan.php? deleteid='.$id_pelanggan.'" class ="text-light">Delete</a></button>
             </td>
           </tr>';
         }
@@ -93,7 +87,7 @@
   ?>
   </tbody>
 </table>
-            <button class="btn btn-primary my-5"><a href="data.php" class="text-light">Tambah Data</a>
+            <button class="btn btn-primary my-5"><a href="data-satuan.php" class="text-light">Tambah Data</a>
             </button>
   </div>
 

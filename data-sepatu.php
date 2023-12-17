@@ -1,17 +1,30 @@
 <?php
-    include 'koneksi.php';
+include "koneksi.php";
+
+$insert_pelanggan = false;
+
+if(isset($_POST['submit'])){
+    mysqli_query($koneksi, "insert into tb_sepatu set 
+    nama_pelanggan = '$_POST[nama_pelanggan]',
+    hp_pelanggan = '$_POST[hp_pelanggan]',
+    jenis_layanan= '$_POST[jenis_layanan]',
+    jumlah_pakaian= '$_POST[jumlah_pakaian]',
+    harga_total='$_POST[harga_total]'");
+
+    header('location: database-sepatu.php');
+} 
 ?>
 
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Penambahan Data VASTlaundry</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <title>Database Pelanggan VASTlaundry</title>
-    </head>
-    <body>
+  </head>
+  <body>
+
   <nav class="navbar bg-primary-subtle fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -45,56 +58,43 @@
   </nav>
 
   </br></br></br></br></br></br>
-        <div class="container">
 
-            <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ID Pemesanan</th>
-      <th scope="col">Nama Pelanggan</th>
-      <th scope="col">No. HP</th>
-      <th scope="col">Jenis Layanan</th>
-      <th scope="col">Jumlah Pakaian</th>
-      <th scope="col">Harga Total</th>
-      <th scope="col">Pengaturan</th>
-    </tr>
-  </thead>
-  <tbody>
+  <body>
+  <div class="container mx-auto p-2" style="width: 800px;">
+    <form method="post">
+        <div class="form-group">
+            <label class="form-label">Nama Pelanggan</label>
+            <input type="text" class="form-control" placeholder="Masukkan nama pelanggan" name="nama_pelanggan" autocomplete="off">
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="form-label">No HP</label>
+            <input type="text" class="form-control" placeholder="Masukkan nomor HP" name="hp_pelanggan" autocomplete="off">
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="form-label">Jenis Layanan</label>
+            <select name="jenis_layanan">
+            <option value="Reguler">Reguler</option>
+            <option value="Express">Express</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="form-label">Jumlah Sepatu</label>
+            <input type="text" class="form-control" placeholder="Masukkan jumlah sepatu" name="jumlah_sepatu">
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="form-label">Harga Total</label>
+            <input type="text" class="form-control" placeholder="Masukkan harga total" name="harga_total" autocomplete="off">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary"name="submit">Submit</button>
+    </form>
+    </div>
 
-  <?php
-    $sql="SELECT * FROM tb_sepatu;";
-    $result=mysqli_query($koneksi, $sql);
-    if($result) {
-        while($row=mysqli_fetch_assoc($result)) {
-            $id_pelanggan = $row['id_pelanggan'];
-            $nama_pelanggan = $row['nama_pelanggan'];
-            $hp_pelanggan = $row['hp_pelanggan'];
-            $jenis_layanan = $row['jenis_layanan'];
-            $jumlah_pakaian = $row['jumlah_pakaian'];
-            $harga_total = $row['harga_total'];
-            echo '<tr>
-            <th scope="row">'.$id_pelanggan.'</th>
-            <td>'.$nama_pelanggan.'</td>
-            <td>'.$hp_pelanggan.'</td>
-            <td>'.$jenis_layanan.'</td>
-            <td>'.$jumlah_pakaian.'</td>
-            <td>'.$harga_total.'</td>
-            <td>
-                <button class="btn btn-primary"><a href="edit-sepatu.php? editid='.$id_pelanggan.'" class="text-light">Edit</a></button>
-                <button class="btn btn-danger"><a href="delete-sepatu.php? deleteid='.$id_pelanggan.'" class ="text-light">Delete</a></button>
-            </td>
-          </tr>';
-        }
-
-    }
-  ?>
-  </tbody>
-</table>
-            <button class="btn btn-primary my-5"><a href="data-sepatu.php" class="text-light">Tambah Data</a>
-            </button>
-  </div>
-
-        <footer class="bd-footer py-4 py-md-5 mt-5 bg-primary-subtle">
+  <footer class="bd-footer py-4 py-md-5 mt-5 bg-primary-subtle">
       <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary text-center">
         <a href="homepage.php">All Rights Reserved ©VASTlaundry 2023</a></br></br></br>
         <div class="row align-items-center">
