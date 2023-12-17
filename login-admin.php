@@ -17,7 +17,7 @@ if (isset($_POST["login"])) {
         $row = mysqli_fetch_assoc($result);
         
         if (password_verify($password, $row["password"])) {
-            header("Location: database.php");
+            header("Location: homepage-kryw.php");
             exit;
         }
     }
