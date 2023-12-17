@@ -59,8 +59,24 @@
       7. Setiap konsumen dianggap setuju dengan isi perhitungan tersebut diatas.</p1>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <footer class="bd-footer py-4 py-md-5 mt-5 bg-primary-subtle">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary text-center">
+        <a href="homepage.php">All Rights Reserved ©VASTlaundry 2023</a></br></br></br>
+        <div class="row align-items-center">
+          <a class="col fs-6" href="https://youtu.be/dQw4w9WgXcQ?si=pX8mEhsOMYARGLf3">
+            Instagram
+          </a>
+          <a class="col fs-6" href="https://youtu.be/BbeeuzU5Qc8?si=crrkoGANXCXw-Xrd">
+            Whatsapp
+          </a>
+          <a class="col fs-6" href="https://youtu.be/n4kluqkCymw?si=DWRcIm0MtOOhOiNp">
+            Line
+          </a>
+        </div>
+      </div>
+    </footer>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+  </body>
 </html>

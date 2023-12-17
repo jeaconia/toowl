@@ -1,3 +1,31 @@
+<?php
+require 'functions.php';
+
+$conn = mysqli_connect("localhost", "tool", "12345678", "vast_laundry");
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+if (isset($_POST["login"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $result = mysqli_query($conn, "SELECT username, password FROM tb_register WHERE username = '$username'");
+
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        
+        if (password_verify($password, $row["password"])) {
+            header("Location: tambah-pelanggan.php");
+            exit;
+        }
+    }
+
+    $error = true;
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
